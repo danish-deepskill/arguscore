@@ -148,6 +148,10 @@ createApp({
       }
     },
   },
+  mounted() {
+    // buka /#contoh untuk langsung mengisi dan menilai contoh esai (untuk demo)
+    if (location.hash === '#contoh') { this.isiContoh(); this.nilai(); }
+  },
 }).mount('#app');
 </script>
 </body>
