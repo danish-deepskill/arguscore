@@ -1,7 +1,9 @@
+# versi scikit-learn dan lightgbm disamakan dengan Google Colab tempat model dilatih
+# (Python 3.12)
 fastapi
 uvicorn
 pandas
 numpy
-scikit-learn
-lightgbm
+scikit-learn==1.6.1
+lightgbm==4.6.0
 # torch (opsional, hanya untuk torch.load)

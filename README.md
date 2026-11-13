@@ -39,9 +39,12 @@ uvicorn app.main:app --reload
 
 Buka http://127.0.0.1:8000, klik **Isi contoh**, lalu **Nilai argumen**.
 
-Catatan: versi scikit-learn dan lightgbm sebaiknya sama dengan versi di Colab
-(versinya ikut tersimpan di file .pth dan akan muncul peringatan kalau berbeda).
-Torch tidak wajib dipasang. Kalau ada, file .pth dimuat dengan `torch.load`.
+Catatan:
+- Pakai Python 3.12. Versi scikit-learn (1.6.1) dan lightgbm (4.6.0) disamakan dengan Colab,
+  karena model disimpan dengan versi itu.
+- File `model/arguscore_model.pth` berukuran sekitar 63 MB.
+- Torch tidak wajib dipasang. Kalau ada, file .pth dimuat dengan `torch.load`.
+- Hasil cek model di data uji (dari Colab): F1 macro 0,597 dan recall Ineffective 0,653 (w = 1.1).
 
 ## Contoh request API
 

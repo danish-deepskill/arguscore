@@ -2,10 +2,14 @@
 seperti di notebook Part 2."""
 
 import pickle
+import warnings
 import zipfile
 from pathlib import Path
 
 import pandas as pd
+
+# warning ini muncul karena ColumnTransformer mengubah data jadi array, aman diabaikan
+warnings.filterwarnings("ignore", message="X does not have valid feature names")
 
 PATH_MODEL = Path(__file__).resolve().parent.parent / "model" / "arguscore_model.pth"
 
